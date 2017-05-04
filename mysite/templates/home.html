@@ -1,0 +1,19 @@
+
+	{% extends "base.html" %}
+
+	{% block title%} Home {% endblock %}
+	{% block content %}
+	<div  class="row">
+		<div class="col-md-8 col-md-offset-2">
+
+		{% for article in articles %}
+	<ul class="list-group">
+  <li class="list-group-item"><a href="{% url 'article_detail' article.pk %}">{{article.title}}</a></li>
+
+</ul>
+	{% endfor %}
+	{% endblock %}
+
+		</div>
+	</div>
+	
